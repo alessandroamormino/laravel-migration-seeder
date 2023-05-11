@@ -41,10 +41,10 @@
     </table> --}}
 
     <hr>
-    
+
     {{-- Metodo dinamico --}}
 
-    <table class="table table-hover">
+    <table class="table-dark table-hover">
       <thead>
         @foreach($trains as $item)
           @foreach($item as $key => $treno)
