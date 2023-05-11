@@ -3,7 +3,9 @@
 @section('content')
   <div class="container">
     <h1 class="m-3">Treni in partenza oggi</h1>
-    <table class="table">
+    {{-- Metodo noioso --}}
+
+    {{-- <table class="table">
       <thead>
         <tr>
           <th scope="col">Azienda</th>
@@ -36,14 +38,31 @@
           </tr>
         @endforeach
       </tbody>
-    </table>
+    </table> --}}
+
     <hr>
-    <table>
+    
+    {{-- Metodo dinamico --}}
+
+    <table class="table table-hover">
       <thead>
-        @foreach($trains as $key => $item)
-          <th>{{$key}}</th>
+        @foreach($trains as $item)
+          @foreach($item as $key => $treno)
+            @if($key <> 'id' && $key <> 'created_at' && $key <> 'updated_at')
+              <th class="scope">{{$key}}</th>
+            @endif
+          @endforeach
         @endforeach
       </thead>
+      <tbody>
+        @foreach($trains as $singleTrain)
+          @foreach($singleTrain as $key => $value)
+            @if($key <> 'id' && $key <> 'created_at' && $key <> 'updated_at')
+              <td>{{$value}}</td>
+            @endif
+          @endforeach
+        @endforeach
+      </tbody>
     </table>
   </div>
 @endsection
