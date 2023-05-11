@@ -2,11 +2,10 @@
 
 @section('content')
   <div class="container">
-    <h1 class="m-3">Trains</h1>
+    <h1 class="m-3">Treni in partenza oggi</h1>
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">id</th>
           <th scope="col">Azienda</th>
           <th scope="col">Stazione di Partenza</th>
           <th scope="col">Stazione di Arrivo</th>   
@@ -23,7 +22,6 @@
       <tbody>
         @foreach($trains as $singleTrain)
           <tr>
-            <td>{{$singleTrain->id}}</td>
             <td>{{$singleTrain->azienda}}</td>
             <td>{{$singleTrain->stazione_partenza}}</td>
             <td>{{$singleTrain->stazione_arrivo}}</td>

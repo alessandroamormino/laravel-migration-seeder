@@ -10,7 +10,8 @@ class PageController extends Controller
 {
     public function index(){
         // richiamo i dati dalla tabella trains creata 
-        $trains = Train::all();
+        $currentDate = date('Y-m-d');
+        $trains = Train::where('data_partenza', $currentDate)->get();
 
         return view('page/home', compact('trains'));
     }
