@@ -37,5 +37,13 @@
         @endforeach
       </tbody>
     </table>
+    <hr>
+    <table>
+      <thead>
+        @foreach($trains as $key => $item)
+          <th>{{$key}}</th>
+        @endforeach
+      </thead>
+    </table>
   </div>
 @endsection
