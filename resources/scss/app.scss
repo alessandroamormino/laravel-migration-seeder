@@ -1,1 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
+
+tbody{
+  tr{
+    &.cancelled{
+      text-decoration: line-through;
+      opacity: .8;
+    }
+  }
+}

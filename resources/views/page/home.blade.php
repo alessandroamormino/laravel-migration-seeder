@@ -35,7 +35,7 @@
       </thead>
       <tbody>
         @foreach($trains as $singleTrain)
-          <tr>
+          <tr class="{{$singleTrain->cancelled ? 'cancelled' : ''}}">
             {{-- METODO CON FAKER --}}
             {{-- <td>{{$singleTrain->azienda}}</td>
             <td>{{$singleTrain->stazione_partenza}}</td>
