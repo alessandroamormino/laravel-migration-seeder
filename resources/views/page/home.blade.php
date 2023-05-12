@@ -44,7 +44,7 @@
 
     {{-- Metodo dinamico --}}
 
-    <table class="table-dark table-hover">
+    <table class="table-dark table-hover table-bordered p-2">
       <thead>
         @foreach($trains as $item)
           @foreach($item as $key => $treno)
