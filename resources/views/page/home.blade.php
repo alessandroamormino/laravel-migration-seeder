@@ -5,7 +5,7 @@
     <h1 class="m-3">Treni in partenza oggi</h1>
     {{-- Metodo noioso --}}
 
-    {{-- <table class="table">
+    <table class="table table-hover">
       <thead>
         <tr>
           <th scope="col">Azienda</th>
@@ -33,18 +33,18 @@
             <td>{{$singleTrain->orario_arrivo}}</td>
             <td>{{$singleTrain->cod_treno}}</td>
             <td>{{$singleTrain->n_carrozze}}</td>
-            <td>{{$singleTrain->in_orario}}</td>
-            <td>{{$singleTrain->cancellato}}</td>
+            <td>{{$singleTrain->in_orario ? 'Si' : 'No'}}</td>
+            <td>{{$singleTrain->cancellato ? 'Si' : 'No'}}</td>
           </tr>
         @endforeach
       </tbody>
-    </table> --}}
+    </table>
 
     <hr>
 
     {{-- Metodo dinamico --}}
 
-    <table class="table-dark table-hover table-bordered p-2">
+    {{-- <table class="table-dark table-hover table-bordered p-2">
       <thead>
         @foreach($trains as $item)
           @foreach($item as $key => $treno)
@@ -63,6 +63,6 @@
           @endforeach
         @endforeach
       </tbody>
-    </table>
+    </table> --}}
   </div>
 @endsection
